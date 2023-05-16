@@ -58,22 +58,29 @@ window.onscroll = function (){
 }
 
 
-var carousel_item_active = document.querySelector('.carousel-item.active')
-var carousel_item_not_active = document.querySelectorAll('.carousel-item:not(.active)')
+
+var carousel_text_btn__text2 = document.querySelectorAll('.carousel-text_btn__text2')
 var carousel_text_btn__text1 = document.querySelectorAll('.carousel-text_btn__text1')
+
+carousel_text_btn__text1[0].classList.add('leFlyInBottom')
+carousel_text_btn__text2[0].classList.add('leFadeIn')
+
 $('.carousel').on('slid.bs.carousel', function () {
- 
+  carousel_text_btn__text1.forEach((e)=>{
+      e.classList.remove('leFlyInBottom')
+      e.parentElement.querySelector('.carousel-text_btn__text2').classList.remove('leFadeIn')
+  })
+
+
   carousel_text_btn__text1.forEach((e)=>{
     if(e.parentElement.parentElement.classList.contains('active')){
       e.classList.add('leFlyInBottom')
       e.parentElement.querySelector('.carousel-text_btn__text2').classList.add('leFadeIn')
-    }else {
-      e.classList.remove('leFlyInBottom')
-      e.parentElement.querySelector('.carousel-text_btn__text2').classList.remove('leFadeIn')
     }
   })
 
 })
+
 
 var h2_second = document.querySelector('.h2-second') 
 setInterval(()=>{
