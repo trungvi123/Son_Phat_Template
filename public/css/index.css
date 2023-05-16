@@ -344,6 +344,12 @@ p {
 .card-product-top img {
     height: 220px;
 }
+.project-slider img {
+    height: 334px;
+    width: 100%;
+}
+
+
 .card-product-bot {
     padding: 10px;
     min-height: 132px;
@@ -423,7 +429,8 @@ p {
     gap: 15px;
 }
 
-.footer-item i {
+.footer-item i
+ {
     margin-right: 8px;
 }
 
