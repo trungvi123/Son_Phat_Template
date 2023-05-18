@@ -20,7 +20,7 @@ body {
 }
 
 a {
-    color: unset;
+    color: black;
     text-decoration: none;
 }
 
@@ -173,6 +173,11 @@ p {
     opacity: 0.3;
 }
 
+.img_slide {
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
 .category_link {
     width: 100%;
     height: 100%;
@@ -242,6 +247,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 .carousel-text_btn:hover {
     color: black;
@@ -343,6 +349,7 @@ p {
 
 .card-product-top img {
     height: 220px;
+    object-fit: cover;
 }
 .project-slider img {
     height: 334px;
@@ -356,6 +363,10 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.card-product-bot p {
+    text-transform: uppercase;
 }
 
 .card-product-bot a {
